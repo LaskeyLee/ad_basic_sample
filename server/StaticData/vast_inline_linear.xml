@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VAST version="3.0">
+    <Ad id="123">
+        <InLine>
+            <AdSystem version="1"><![CDATA[cnoam]]></AdSystem>
+            <!--曝光地址1到多个-->
+            <Impression><![CDATA[http://t.cnoam.com/tracking1]]></Impression>
+            <Impression><![CDATA[http://another.domain.com/tracking2]]></Impression>
+            <Creatives>
+                <Creative>
+                    <Linear>
+                        <!--广告时长-->
+                        <Duration><![CDATA[00:00:30]]></Duration>
+                        <!--各种事件的监测-->
+                        <TrackingEvents>
+                            <Tracking event="creativeView">http://myTrackingURL/creativeView</Tracking>
+                            <Tracking event="start">http://myTrackingURL/start</Tracking>
+                            <Tracking event="midpoint">http://myTrackingURL/midpoint</Tracking>
+                            <Tracking event="firstQuartile">http://myTrackingURL/firstQuartile</Tracking>
+                            <Tracking event="thirdQuartile">http://myTrackingURL/thirdQuartile</Tracking>
+                            <Tracking event="complete">http://myTrackingURL/complete</Tracking>
+                            <Tracking event="mute">http://myTrackingURL/mute</Tracking>
+                            <Tracking event="unmute">http://myTrackingURL/unmute</Tracking>
+                            <Tracking event="pause">http://myTrackingURL/pause</Tracking>
+                            <Tracking event="resume">http://myTrackingURL/resume</Tracking>
+                            <Tracking event="rewind">http://myTrackingURL/rewind</Tracking>
+                        </TrackingEvents>
+                        <MediaFiles>
+                            <MediaFile id="123" type="video/x-flv" scalable="true" maintainAspectRatio="true" delivery="progressive" width="400" height="300" apiFramework="">
+                                <![CDATA[http://cdnp.tremormedia.com/video/acudeo/Carrot_400x300_500kb.flv]]>
+                            </MediaFile>
+                        </MediaFiles>
+                        <AdParameters xmlEncoded="false"><![CDATA[]]></AdParameters>
+                        <!--点击跳转可以有0到1个，点击监测可以有0到多个-->
+                        <VideoClicks>
+                            <ClickThrough><![CDATA[http://t.cnoam.com/tracking_test?url=http%3A%2F%2Fwww.ciscomall.com.cn]]></ClickThrough>
+                            <ClickTracking><![CDATA[http://tracking1/]]></ClickTracking>
+                            <ClickTracking><![CDATA[http://tracking2/]]></ClickTracking>
+                            <ClickTracking><![CDATA[http://tracking3/]]></ClickTracking>
+                        </VideoClicks>
+                    </Linear>
+                </Creative>
+            </Creatives>
+        </InLine>
+    </Ad>
+</VAST>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>CNOAM JS Tracking Sample</title>
+    <script>
+        //可以在JS中创建图片对象，也可以直接在页面中写图片标签。大多数情况下需要动态创建的。
+        var seCall = new Image();
+        seCall.src = "http://t.cnoam.com/images/logo.png?id=1";
+        seCall.onload = function(){
+            seCall = null;
+        }
+    </script>
+</head>
+<body>
+    <img src="http://t.cnoam.com/images/logo.png?id=2"/>
+</body>
+</html>
